@@ -1,26 +1,30 @@
-import {View, Text, Dimensions} from 'react-native'
+import { View, Text, Dimensions } from "react-native";
 
-const MovieItem = ({movieName}) => {
-    const {width, height} = Dimensions.get('window')
+const MovieItem = ({ movieName }) => {
+  const { width, height } = Dimensions.get("window");
 
   return (
-    <View style={{
+    <View
+      style={{
         backgroundColor: "rgba(202, 240, 248, 0.41)",
-        width: width * .9,
-        height: width * .1,
+        width: width * 0.9,
         borderRadius: 10,
-        marginBottom: width * .02,
-    }}>
-        <Text
+        marginBottom: width * 0.02,
+      }}
+    >
+      <Text
         style={{
-            fontSize: width * .04,
-            fontWeight: 'bold',
-            paddingTop: width * .02,
-            paddingLeft: width * .05,
+          fontSize: width * 0.04,
+          fontWeight: "bold",
+          paddingTop: width * 0.02,
+          paddingBottom: width * 0.02,
+          paddingLeft: width * 0.05,
         }}
-        >{movieName}</Text>
+      >
+        {movieName}
+      </Text>
     </View>
-  )
-}
+  );
+};
 
-export default MovieItem
+export default MovieItem;

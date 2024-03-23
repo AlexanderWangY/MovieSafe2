@@ -16,6 +16,7 @@ const HomeRoot = () => {
           fontWeight: "bold",
           fontSize: 22,
         },
+        headerTitleAlign: "center",
       }}
     >
       <Stack.Screen
