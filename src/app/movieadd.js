@@ -8,8 +8,8 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
-import SelectableMovieItem from "../../components/SelectableMovieItem";
-import { saveMovie } from "../../actions/storage";
+import SelectableMovieItem from "../components/SelectableMovieItem";
+import { saveMovie } from "../actions/storage";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const MovieAdd = () => {
@@ -108,7 +108,7 @@ const MovieAdd = () => {
         onPress={async () => {
           if (selectedMovieName !== "") {
             await saveMovie(selectedMovieName);
-            router.replace("/home");
+            router.replace("/");
           }
         }}
         style={{
